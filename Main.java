@@ -1,23 +1,34 @@
 public class Main {
 
+    Vehicle vehicle1;
+    Vehicle vehicle2;
+    Vehicle vehicle3;
+
+    public Main() {
+        this.vehicle1 = new Vehicle("Toyota", "Supra MK4", 1998);
+        this.vehicle2 = new Vehicle("BMW", "M4 Competition", 2021);
+        this.vehicle3 = new Vehicle("Mercedes-Benz", "G-Class", 2020);
+    }
+
+    public void displayVehicles() {
+
+        this.vehicle1.displayInfo();
+        System.out.println("Age: " + this.vehicle1.calculateAge());
+        System.out.println("Vintage: " + this.vehicle1.isVintage());
+        System.out.println();
+
+        this.vehicle2.displayInfo();
+        System.out.println("Age: " + this.vehicle2.calculateAge());
+        System.out.println("Vintage: " + this.vehicle2.isVintage());
+        System.out.println();
+
+        this.vehicle3.displayInfo();
+        System.out.println("Age: " + this.vehicle3.calculateAge());
+        System.out.println("Vintage: " + this.vehicle3.isVintage());
+    }
+
     public static void main(String[] args) {
-
-        Vehicle vehicle1 = new Vehicle("Toyota", "Supra MK4", 1998);
-        Vehicle vehicle2 = new Vehicle("BMW", "M4 Competition", 2021);
-        Vehicle vehicle3 = new Vehicle("Mercedes-Benz", "G-Class", 2020);
-
-        vehicle1.displayInfo();
-        System.out.println("Age: " + vehicle1.calculateAge());
-        System.out.println("Vintage: " + vehicle1.isVintage());
-        System.out.println();
-
-        vehicle2.displayInfo();
-        System.out.println("Age: " + vehicle2.calculateAge());
-        System.out.println("Vintage: " + vehicle2.isVintage());
-        System.out.println();
-
-        vehicle3.displayInfo();
-        System.out.println("Age: " + vehicle3.calculateAge());
-        System.out.println("Vintage: " + vehicle3.isVintage());
+        Main main = new Main();
+        main.displayVehicles();
     }
 }
